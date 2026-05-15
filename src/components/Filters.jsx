@@ -88,7 +88,7 @@ export default function Filters({ filters, onChange, totalCount, filteredCount, 
               {Array.from({ length: 5 }, (_, i) => (
                 <StarIcon key={i} filled={i < q} />
               ))}
-              <span className="quality-label">& up</span>
+              {q < 5 && <span className="quality-label">& up</span>}
             </button>
           ))}
         </div>
